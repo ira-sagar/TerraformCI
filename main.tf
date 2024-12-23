@@ -28,16 +28,16 @@ resource "random_string" "uniquestring" {
   upper            = false
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "811-83d90123-provide-continuous-delivery-with-gith"
-  location = "westus"
-}
+# resource "azurerm_resource_group" "rg" {
+#   name     = "811-83d90123-provide-continuous-delivery-with-gith"
+#   location = "westus"
+# }
 
 #IAC test
 resource "azurerm_storage_account" "storageaccount" {
   name                     = "stg${random_string.uniquestring.result}"
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
+  resource_group_name      = "811-935b699d-provide-continuous-delivery-with-gith"
+  location                 = "westus"
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
