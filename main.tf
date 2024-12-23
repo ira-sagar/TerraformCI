@@ -33,6 +33,7 @@ resource "azurerm_resource_group" "rg" {
   location = "westus"
 }
 
+#IAC test
 resource "azurerm_storage_account" "storageaccount" {
   name                     = "stg${random_string.uniquestring.result}"
   resource_group_name      = azurerm_resource_group.rg.name
