@@ -36,7 +36,7 @@ resource "random_string" "uniquestring" {
 #IAC test
 resource "azurerm_storage_account" "storageaccount" {
   name                     = "stg${random_string.uniquestring.result}"
-  resource_group_name      = "811-935b699d-provide-continuous-delivery-with-gith"
+  resource_group_name      = "811-8a348f30-provide-continuous-delivery-with-gith"
   location                 = "westus"
   account_tier             = "Standard"
   account_replication_type = "LRS"
